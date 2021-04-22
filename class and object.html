@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>Latihan Class dan Objek </title>
+    </head>
+    <body> 
+        <form onsubmit="return false">
+            <p>jilbab1 :<input type="text" id="pashmina" placeholder ="pashmina"></p>
+            <p>jilbab2 :<input type="text" id="segiempat" placeholder="segiempat"></p>
+            <p>jilbab3 :<input type="text" id="selop" placeholder="selop"></p>
+            <button onclick="sles()">
+                Klik Disini  
+            </button>
+        </form>
+    
+        
+        <script>
+            function sles() {
+                let p = document.getElementById("pashmina").value;
+                let q = document.getElementById("segiempat").value;
+                let r = document.getElementById("selop").value;
+
+
+                class jilbab {
+                
+                merk;
+                warna;
+                pashmina;
+                segiempat;
+                selop;
+        
+                constructor(pashmina, segiempat, selop, merk, warna) {
+                    this.merk = "rabbani";
+                    this.warna = "fadhilah";
+                    this.merk1 = "elzatta";
+                    this.warna1 = "zoya";
+                    this.merk2 = "sanscraf";
+                    this.warna2 = "paris";
+                    this.pashmina = p;
+                    this.segiempat = q;
+                    this.selop = r; 
+
+                }
+        
+                jual(pashmina) {
+                    return "jilbab" + pashmina + "ini sudah terjual";
+                }
+                kegunaan(segiempat){
+                    return "jilbab" + segiempat + "digunakan untuk menutupi aurat";
+                }
+                beli(selop){
+                    return "tas " + selop + "masih ada stok";
+                }
+
+                
+            }
+        
+           let jenisjilbab1 = new jilbab;
+           let jenisjilbab2 = new jilbab;
+           let jenisjilbab3 = new jilbab;
+
+            console.log(jenisjilbab1.jual(p));
+            console.log(jenisjilbab1.merk);
+            console.log(jenisjilbab1.warna);
+            
+            console.log(jenisjilbab2.kegunaan(q));
+            console.log(jenisjilbab2.merk1);
+            console.log(jenisjilbab2.warna1);
+            
+            console.log(jenisjilbab3.beli(r));
+            console.log(jenisjilbab3.merk2);
+            console.log(jenisjilbab3.warna2);
+            
+        
+        }
+        </script>
+    </body>
+</html>
